@@ -724,7 +724,7 @@ function editRequest(id,requestEmpId){
 						   
 						   else{
 						   	if($this->session->userdata('designationId') != '1'  && $this->session->userdata('designationId') != '42'  && $this->session->userdata('roleId') == '2' ){
-						   		if($request['LTYPE_TYPE'] == 'Annual' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ){
+						   		if($request['LTYPE_TYPE'] == 'Annual' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ){
                                     
                               if($request['LS_STATUS'] == 'Applied' ){
                                 ?>
@@ -786,7 +786,7 @@ function editRequest(id,requestEmpId){
 									<?php
 							  }
 						   }
-						   else if($request['LTYPE_TYPE'] == 'Sick' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ){
+						   else if($request['LTYPE_TYPE'] == 'Sick' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ){
                                     
                               if($request['LS_STATUS'] == 'Applied'){
                                 ?>
@@ -846,7 +846,7 @@ function editRequest(id,requestEmpId){
 						   }
 						   else{
                                     
-                              if($request['LS_STATUS'] == 'Applied' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ){
+                              if($request['LS_STATUS'] == 'Applied' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ){
                                 ?>
 								<tr style="white-space : nowrap;">
 											<td> <?php echo $request['EMP_BADGE_ID']?> </td>
@@ -863,7 +863,7 @@ function editRequest(id,requestEmpId){
 									</tr>
 									<?php
 							  }
-							  else if($request['LS_STATUS'] == 'Approved' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ){
+							  else if($request['LS_STATUS'] == 'Approved' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ){
                                     ?>
 									<tr style="white-space : nowrap;">
 											<td> <?php echo $request['EMP_BADGE_ID']?> </td>
@@ -876,7 +876,7 @@ function editRequest(id,requestEmpId){
 									</tr>
 									<?php
 							  }
-							   else if($request['LS_STATUS'] == 'Done' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ){
+							   else if($request['LS_STATUS'] == 'Done' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ){
                                     ?>
 									<tr style="white-space : nowrap;">
 											<td> <?php echo $request['EMP_BADGE_ID']?> </td>
@@ -889,7 +889,7 @@ function editRequest(id,requestEmpId){
 									</tr>
 									<?php
 							  }
-							  else if($request['LS_STATUS'] == 'Declined' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') ) {
+							  else if($request['LS_STATUS'] == 'Declined' &&  $request['DEPT_ID'] == $this->session->userdata('departmentId') && $request['EMP_ID'] != $this->session->userdata('id') && $request['ROLE_ID'] != '3' ) {
                                    ?>
 								   <tr style="white-space : nowrap;">
 											<td> <?php echo $request['EMP_BADGE_ID']?> </td>
